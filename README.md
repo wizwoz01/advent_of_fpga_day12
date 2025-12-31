@@ -15,6 +15,7 @@ Structure
 - results/ — 
 
 Introduction
+
 Day 12 is implemented as an FPGA accelerator that performs the combinational/streaming portions of the puzzle algorithm on the KV260. The software performs input parsing and small control tasks, while the FPGA implements the heavy dataflow or parallel parts of the solution.
 
 Approach
