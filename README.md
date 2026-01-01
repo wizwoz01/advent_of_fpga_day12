@@ -32,4 +32,5 @@ Results
 
 
 Conclusion
+
 This repo provides a starting point for implementing Advent of Code Day 12 on the KV260 using an FPGA-first approach.
