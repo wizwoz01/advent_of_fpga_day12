@@ -1,0 +1,66 @@
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'day12_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/ricar/DAY12/DAY12.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'day12_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/ricar/DAY12/DAY12.sim/sim_1/behav/xsim/test_data.hex'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/ricar/DAY12/DAY12.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj day12_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/ricar/DAY12/DAY12.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot day12_tb_behav xil_defaultlib.day12_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot day12_tb_behav xil_defaultlib.day12_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/ricar/DAY12/DAY12.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "day12_tb_behav -key {Behavioral:sim_1:Functional:day12_tb} -tclbatch {day12_tb.tcl} -view {C:/CECS490A/advent_of_fpga_day12/results/simulation/day12_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/CECS490A/advent_of_fpga_day12/results/simulation/day12_tb_behav.wcfg
+source day12_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Loaded 3019 words from test_data.hex
+=== Day 12 Accelerator Testbench ===
+Time: 70000 - Starting test
+Sending 3019 words of test data
+Time: 70000 - Accelerator reports in_ready=1, sending header
+Time: 75000 - Sending data[0] = 0x03e80006
+Time: 85000 - Sending data[1] = 0x00070303
+Time: 95000 - Sending data[2] = 0x11100200
+Time: 105000 - Sending data[3] = 0x00222012
+Time: 115000 - Sending data[4] = 0x00070303
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1042.156 ; gain = 35.934
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'day12_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1042.156 ; gain = 35.934
+run all
+Time: 30280000 - All input data sent, waiting for result...
+Time: 30295000 - Received result: 595 regions fit
+Time: 30295000 - Output valid: 595
+=== Test Complete ===
+$finish called at time : 30395 ns : File "C:/CECS490A/advent_of_fpga_day12/hardware/testbench/day12_tb.v" Line 164

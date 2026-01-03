@@ -1,0 +1,313 @@
+
+*** Running vivado
+    with args -log day12_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source day12_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source day12_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 394.125 ; gain = 69.309
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ricar/DAY12/DAY12.srcs/utils_1/imports/synth_1/day12_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ricar/DAY12/DAY12.srcs/utils_1/imports/synth_1/day12_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top day12_top -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27316
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1768.203 ; gain = 334.039
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'day12_top' [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/day12_top.v:14]
+INFO: [Synth 8-6157] synthesizing module 'accelerator' [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:14]
+	Parameter MAX_REGION_W bound to: 64 - type: integer 
+	Parameter MAX_REGION_H bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'accelerator' (0#1) [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'day12_top' (0#1) [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/day12_top.v:14]
+WARNING: [Synth 8-6014] Unused sequential element region_q_reg[4] was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:117]
+WARNING: [Synth 8-6014] Unused sequential element region_q_reg[5] was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:117]
+WARNING: [Synth 8-6014] Unused sequential element region_q_reg[6] was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:117]
+WARNING: [Synth 8-6014] Unused sequential element region_q_reg[7] was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:117]
+WARNING: [Synth 8-6014] Unused sequential element area_calc_block.ra_reg was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:198]
+WARNING: [Synth 8-6014] Unused sequential element area_calc_block.ta_reg was removed.  [C:/CECS490A/advent_of_fpga_day12/hardware/rtl/accelerator.v:199]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1862.594 ; gain = 428.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1862.594 ; gain = 428.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1862.594 ; gain = 428.430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1862.594 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc]
+create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1967.652 ; gain = 17.961
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:17]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:18]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:19]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:20]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_property' is not supported in the xdc constraint file. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:22]
+CRITICAL WARNING: [Vivado 12-4430] You are lowering the severity from an ERROR. This can potentially lead to board damage or other functionality issues on hardware. If this is not desired, please run 'reset_property SEVERITY [get_drc_checks KLOC-1]' to undo this change. [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc:29]
+Finished Parsing XDC File [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/CECS490A/advent_of_fpga_day12/hardware/constraints/kv260.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/day12_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/day12_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1967.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1967.652 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1967.652 ; gain = 533.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1967.652 ; gain = 533.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1967.652 ; gain = 533.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'accelerator'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                 iSTATE1 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'accelerator'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1967.652 ; gain = 533.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 23    
+	   2 Input    1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP accel/regions_that_fit1, operation Mode is: A2*B2.
+DSP Report: register accel/region_h_reg is absorbed into DSP accel/regions_that_fit1.
+DSP Report: register accel/region_w_reg is absorbed into DSP accel/regions_that_fit1.
+DSP Report: operator accel/regions_that_fit1 is absorbed into DSP accel/regions_that_fit1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1967.652 ; gain = 533.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|accelerator | A2*B2       | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 2460.180 ; gain = 1026.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:32 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|accelerator | A'*B'       | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |CARRY8          |    77|
+|3     |DSP_ALU         |     1|
+|4     |DSP_A_B_DATA    |     1|
+|5     |DSP_C_DATA      |     1|
+|6     |DSP_MULTIPLIER  |     1|
+|7     |DSP_M_DATA      |     1|
+|8     |DSP_OUTPUT      |     1|
+|9     |DSP_PREADD      |     1|
+|10    |DSP_PREADD_DATA |     1|
+|11    |LUT1            |     3|
+|12    |LUT2            |   408|
+|13    |LUT3            |    49|
+|14    |LUT4            |   188|
+|15    |LUT5            |    22|
+|16    |LUT6            |   345|
+|17    |FDRE            |   183|
+|18    |IBUF            |    36|
+|19    |OBUF            |    34|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:09 ; elapsed = 00:01:29 . Memory (MB): peak = 2505.117 ; gain = 965.895
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:41 . Memory (MB): peak = 2505.117 ; gain = 1070.953
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2516.168 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'day12_top' is not ideal for floorplanning, since the cellview 'accelerator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2534.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 38 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 36 instances
+
+Synth Design complete, checksum: ede953b4
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 8 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:51 ; elapsed = 00:02:17 . Memory (MB): peak = 2534.031 ; gain = 2115.051
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ricar/DAY12/DAY12.runs/synth_1/day12_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file day12_top_utilization_synth.rpt -pb day12_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  3 00:26:54 2026...
