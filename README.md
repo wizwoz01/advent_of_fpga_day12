@@ -123,4 +123,4 @@ This repo demonstrates a minimal KV260 streaming accelerator workflow:
 - Stream into RTL core with ready/valid
 - Get a single 32-bit answer out
 
-Next step is integrating the stream ports into a real hardware and providing a proper KV260 pinout + I/O standards.
+Next step is integrating the stream ports into real hardware and providing a proper KV260 pinout + I/O standards.
